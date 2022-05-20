@@ -5,7 +5,7 @@ import UserRow from './UserRow';
 const Users = () => {
     const [users, setUsers, refetch] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/user', {
+        fetch('https://glacial-sierra-51251.herokuapp.com/user', {
             method: 'GET',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -18,7 +18,7 @@ const Users = () => {
             })
     }, [setUsers])
     // const { data: users, isLoading } = useQuery('users', () => {
-    //     // fetch('http://localhost:5000/user', { method: 'GET' })
+    //     // fetch('https://glacial-sierra-51251.herokuapp.com/user', { method: 'GET' })
     //     //     .then(res => res.json())
 
     // });
